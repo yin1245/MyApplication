@@ -1,97 +1,111 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/main"
-    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
     <AbsoluteLayout
         android:layout_width="match_parent"
         android:layout_height="200dp">
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="登陆界面"
-            android:textSize="42dp"
+            android:layout_x="-1dp"
+            android:layout_y="95dp"
             android:gravity="center"
-            android:layout_y="57dp"
-            android:textColor="@android:color/background_light" />
+            android:text="密码登录"
+            android:textColor="@android:color/background_dark"
+            android:textSize="42dp" />
     </AbsoluteLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="57dp"	
+        android:layout_height="57dp"
         android:orientation="horizontal">
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="账号："
-            android:textSize="27dp"
-            android:textColor="@android:color/background_dark" />
+            android:textColor="@android:color/background_dark"
+            android:textSize="27dp" />
+
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="number"
-            android:hint="请输入你的账号" />
+            android:hint="请输入你的账号"
+            android:inputType="number" />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="57dp"
         android:orientation="horizontal">
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="密码："
-            android:textSize="27dp"
-            android:textColor="@android:color/background_dark" />
+            android:textColor="@android:color/background_dark"
+            android:textSize="27dp" />
+
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="number"
-            android:hint="请输入你的密码" />
+            android:hint="请输入你的密码"
+            android:inputType="number" />
     </LinearLayout>
 
     <RadioGroup
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="男"
-            android:checked="true" />
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="女" />
-    </RadioGroup>
+        android:orientation="horizontal" />
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:text="身份："
+            android:textColor="@android:color/background_dark"
+            android:textSize="27dp" />
+
         <CheckBox
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="教师" />
+            android:textSize="27dp"
+            android:layout_weight="1"
+            android:text="顾客" />
+
         <CheckBox
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="学生" />
-        <CheckBox
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="职工" />
+            android:layout_weight="1"
+            android:textSize="27dp"
+            android:text="商家" />
     </LinearLayout>
 
-    <Spinner
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:insetLeft="170dp"
+        android:text="登    录"
+        android:textSize="31dp"
+        app:backgroundTint="#00BCD4" />
+
+    <TextView
+        android:id="@+id/textView2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/spinner" />
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:text="登    陆"
-        android:textSize="31dp" />
+        android:text="您还没有账号吗?请点击这里注册"
+        android:textColor="#0347F4"
+        android:textSize="20dp" />
 </LinearLayout>
 
